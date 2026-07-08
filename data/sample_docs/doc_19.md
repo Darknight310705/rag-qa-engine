@@ -1,0 +1,7 @@
+# Caching Strategies: LRU and Write Policies
+
+Least Recently Used (LRU) is a cache eviction policy that discards the least recently accessed item first when the cache reaches capacity, based on the assumption that recently accessed items are more likely to be accessed again soon. It is commonly implemented using a combination of a hash map for O(1) lookups and a doubly linked list to track access order, allowing both lookup and eviction to run in constant time.
+
+Least Frequently Used (LFU) instead evicts the item with the lowest access count, which can outperform LRU for access patterns with a stable set of "hot" items, but requires more bookkeeping and can be slow to adapt when access patterns shift over time. Time-based expiration (TTL) evicts items after a fixed duration regardless of access pattern, often used alongside LRU or LFU rather than as a replacement.
+
+Write-through caching writes data to both the cache and the underlying data store synchronously on every write, ensuring consistency at the cost of write latency. Write-back (or write-behind) caching writes only to the cache immediately and asynchronously flushes to the underlying store later, improving write latency but risking data loss if the cache fails before the flush occurs. Write-around caching writes directly to the underlying store, bypassing the cache, which avoids filling the cache with data that may not be read again soon.

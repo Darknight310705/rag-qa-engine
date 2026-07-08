@@ -1,0 +1,150 @@
+[
+  {
+    "query": "What is the difference between a bi-encoder and a cross-encoder?",
+    "relevant_doc_ids": ["doc_08"]
+  },
+  {
+    "query": "How does the token bucket algorithm work for rate limiting?",
+    "relevant_doc_ids": ["doc_06"]
+  },
+  {
+    "query": "What parameters control term frequency saturation in BM25?",
+    "relevant_doc_ids": ["doc_04"]
+  },
+  {
+    "query": "Why would you use a refresh token instead of just a long-lived access token?",
+    "relevant_doc_ids": ["doc_05"]
+  },
+  {
+    "query": "What is the difference between IVF and HNSW indexes in FAISS?",
+    "relevant_doc_ids": ["doc_07"]
+  },
+  {
+    "query": "How does semantic chunking decide where to place chunk boundaries?",
+    "relevant_doc_ids": ["doc_09"]
+  },
+  {
+    "query": "What is the tradeoff between smaller and larger chunk sizes in a RAG pipeline?",
+    "relevant_doc_ids": ["doc_09"]
+  },
+  {
+    "query": "What is the difference between Recall@k and Precision@k?",
+    "relevant_doc_ids": ["doc_10"]
+  },
+  {
+    "query": "How does least connections load balancing differ from round robin?",
+    "relevant_doc_ids": ["doc_02"]
+  },
+  {
+    "query": "Why can over-indexing a database table hurt write performance?",
+    "relevant_doc_ids": ["doc_01"]
+  },
+  {
+    "query": "How can hybrid search improve recall compared to dense retrieval alone?",
+    "relevant_doc_ids": ["doc_03", "doc_04"]
+  },
+  {
+    "query": "What does MRR measure and how does it reward search result rankings?",
+    "relevant_doc_ids": ["doc_10"]
+  },
+  {
+    "query": "How is session affinity achieved using IP hash load balancing?",
+    "relevant_doc_ids": ["doc_02"]
+  },
+  {
+    "query": "What is product quantization used for in vector search?",
+    "relevant_doc_ids": ["doc_07"]
+  },
+  {
+    "query": "What claims are typically included in a JWT payload?",
+    "relevant_doc_ids": ["doc_05"]
+  },
+  {
+    "query": "How do virtual nodes improve load distribution on a hash ring?",
+    "relevant_doc_ids": ["doc_11"]
+  },
+  {
+    "query": "Why is it impossible to have both consistency and availability during a network partition?",
+    "relevant_doc_ids": ["doc_12"]
+  },
+  {
+    "query": "What's the difference between at-least-once and exactly-once message delivery?",
+    "relevant_doc_ids": ["doc_13"]
+  },
+  {
+    "query": "How does a half-open state let a failing service recover without full traffic?",
+    "relevant_doc_ids": ["doc_14"]
+  },
+  {
+    "query": "Why does PKCE exist for mobile apps that can't store a client secret?",
+    "relevant_doc_ids": ["doc_15"]
+  },
+  {
+    "query": "How does GraphQL avoid the over-fetching problem common in REST APIs?",
+    "relevant_doc_ids": ["doc_16"]
+  },
+  {
+    "query": "What happens when a container exceeds its memory limit in Kubernetes?",
+    "relevant_doc_ids": ["doc_17"]
+  },
+  {
+    "query": "What is the difference between a canary deployment and a blue-green deployment?",
+    "relevant_doc_ids": ["doc_18"]
+  },
+  {
+    "query": "How does write-back caching differ from write-through caching in terms of data loss risk?",
+    "relevant_doc_ids": ["doc_19"]
+  },
+  {
+    "query": "Why is cache invalidation across edge servers considered a hard problem?",
+    "relevant_doc_ids": ["doc_20"]
+  },
+  {
+    "query": "What are the operational costs of splitting a monolith into microservices?",
+    "relevant_doc_ids": ["doc_21"]
+  },
+  {
+    "query": "How does CQRS relate to event sourcing?",
+    "relevant_doc_ids": ["doc_22"]
+  },
+  {
+    "query": "What is a phantom read and which isolation level prevents it?",
+    "relevant_doc_ids": ["doc_23"]
+  },
+  {
+    "query": "Why is choosing a shard key one of the hardest decisions in a sharded database?",
+    "relevant_doc_ids": ["doc_24"]
+  },
+  {
+    "query": "Why do horizontally scaled WebSocket servers need a shared pub-sub layer like Redis?",
+    "relevant_doc_ids": ["doc_25"]
+  },
+  {
+    "query": "What communication patterns does gRPC support besides simple request-response?",
+    "relevant_doc_ids": ["doc_26"]
+  },
+  {
+    "query": "How many node failures can a five-node Raft cluster tolerate and still make progress?",
+    "relevant_doc_ids": ["doc_27"]
+  },
+  {
+    "query": "Why can't metrics alone explain why one specific request was slow?",
+    "relevant_doc_ids": ["doc_28"]
+  },
+  {
+    "query": "How can I stop one failing service from taking down the services that depend on it?",
+    "relevant_doc_ids": ["doc_14"]
+  },
+  {
+    "query": "What's a good way to reduce redundant round trips when a client needs data from several related resources at once?",
+    "relevant_doc_ids": ["doc_16"]
+  },
+  {
+    "query": "If I only have a handful of servers to add or remove from a cache cluster, how do I avoid remapping every key each time?",
+    "relevant_doc_ids": ["doc_11"]
+  },
+  {
+    "query": "How do I keep an audit trail of every change made to an entity over its entire lifetime?",
+    "relevant_doc_ids": ["doc_22"]
+  }
+]

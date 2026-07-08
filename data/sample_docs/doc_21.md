@@ -1,0 +1,7 @@
+# Microservices vs Monolithic Architecture
+
+A monolithic architecture packages an entire application as a single deployable unit, sharing one codebase, one database, and one deployment pipeline. This simplifies development early on: there's no network overhead between components, transactions can span the whole application, and there's only one thing to deploy and monitor.
+
+A microservices architecture splits an application into independently deployable services, each typically owning its own data store, communicating over the network via APIs or message queues. This trades development simplicity for independent scalability (scaling only the services under load, not the whole application), independent deployability (teams can ship their service without coordinating a monolith-wide release), and fault isolation (a failure in one service doesn't necessarily take down the others).
+
+The costs of microservices are real and often underestimated: distributed transactions become significantly harder without a shared database, debugging a request that spans multiple services requires distributed tracing, network calls introduce latency and new failure modes that don't exist in in-process function calls, and operational complexity multiplies with the number of independently deployed services. A common recommendation is to start with a well-structured monolith and extract services only when there's a clear, specific need -- team scaling boundaries, independent scaling requirements, or genuinely separate domains -- rather than adopting microservices by default.

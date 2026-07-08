@@ -1,0 +1,7 @@
+# ACID Transactions and Isolation Levels
+
+ACID describes four guarantees a database transaction system provides: Atomicity, meaning a transaction's operations either all succeed or all fail together, with no partial application; Consistency, meaning a transaction moves the database from one valid state to another according to its defined rules and constraints; Isolation, meaning concurrent transactions do not interfere with each other's intermediate state; and Durability, meaning once a transaction commits, it survives subsequent system failures.
+
+Isolation is typically the most nuanced of the four, since perfect isolation (Serializable) can be expensive, so databases offer weaker isolation levels as a performance tradeoff. Read Uncommitted allows a transaction to see uncommitted changes from other transactions (dirty reads). Read Committed prevents dirty reads but allows non-repeatable reads, where re-reading the same row within a transaction can return different values if another transaction committed a change in between. Repeatable Read prevents non-repeatable reads but can still allow phantom reads, where a repeated range query returns different rows.
+
+Serializable isolation, the strongest level, guarantees that the outcome of concurrently executing transactions is equivalent to running them one at a time in some order, but this typically requires either locking that reduces concurrency or optimistic concurrency control with transaction retries when conflicts are detected.

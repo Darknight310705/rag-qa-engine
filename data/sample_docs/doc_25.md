@@ -1,0 +1,7 @@
+# WebSockets and Real-Time Communication
+
+WebSockets provide a persistent, full-duplex communication channel between a client and server over a single TCP connection, allowing either side to send messages at any time without the overhead of repeatedly establishing new HTTP connections. This makes them well-suited for applications requiring low-latency bidirectional communication, such as chat applications, live collaborative editing, and real-time dashboards.
+
+A WebSocket connection begins as a standard HTTP request with an Upgrade header, and if the server supports WebSockets, the connection is upgraded from HTTP to the WebSocket protocol, after which both sides can send frames independently without the request-response pattern that HTTP requires. This is fundamentally different from HTTP polling, where a client repeatedly requests updates on a timer, or long polling, where the server holds a request open until new data is available before responding.
+
+Because WebSocket connections are stateful and held open for extended periods, scaling a WebSocket-based service introduces challenges that stateless HTTP services don't face: load balancers need sticky sessions or a shared state store to route messages to the correct server instance holding a given connection, and horizontally scaling requires a pub-sub layer (such as Redis) to broadcast messages across server instances so a message published on one instance reaches clients connected to a different instance.

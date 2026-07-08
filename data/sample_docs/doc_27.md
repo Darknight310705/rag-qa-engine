@@ -1,0 +1,7 @@
+# Distributed Consensus: Raft and Paxos
+
+Distributed consensus algorithms allow a cluster of machines to agree on a single value or sequence of values even in the presence of node failures or network delays, which is foundational to building reliable distributed systems like distributed databases, configuration stores, and leader election services. Paxos was the original widely studied consensus algorithm, but it is notoriously difficult to understand and implement correctly.
+
+Raft was designed explicitly as a more understandable alternative to Paxos while providing equivalent guarantees. Raft decomposes consensus into three relatively independent subproblems: leader election, where the cluster elects a single leader responsible for coordinating all writes; log replication, where the leader appends entries to its log and replicates them to follower nodes; and safety, ensuring that once an entry is committed (replicated to a majority of nodes), it cannot be lost or overwritten even if leaders change.
+
+A Raft cluster requires a majority (quorum) of nodes to be available to make progress, meaning a cluster of five nodes can tolerate two node failures while continuing to operate. If the leader fails, remaining nodes detect the absence of heartbeats and hold a new election. Systems like etcd, Consul, and CockroachDB use Raft internally to maintain consistency across replicated nodes.

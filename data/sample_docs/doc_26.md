@@ -1,0 +1,7 @@
+# gRPC and Protocol Buffers
+
+gRPC is a high-performance remote procedure call framework that uses Protocol Buffers (protobuf) as its interface definition language and message serialization format, running over HTTP/2. Unlike REST's typically JSON-over-HTTP/1.1 approach, gRPC's binary protobuf encoding is significantly more compact and faster to serialize and deserialize, and HTTP/2 allows multiplexing many requests over a single TCP connection.
+
+A .proto file defines the service's methods and message schemas, and gRPC's tooling generates client and server code in multiple languages from this single definition, giving strong type safety across language boundaries in polyglot systems. This contrasts with REST APIs, where the contract between client and server is typically documented separately (e.g., via OpenAPI) rather than enforced at compile time.
+
+gRPC supports four communication patterns: unary RPC (a single request, single response, like a typical REST call), server streaming (one request, a stream of responses), client streaming (a stream of requests, one response), and bidirectional streaming (both sides stream independently). This makes gRPC well-suited to internal service-to-service communication where performance matters and both ends are under your control, while REST or GraphQL often remain preferable for public-facing APIs where broad client compatibility and human-readability matter more.

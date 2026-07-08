@@ -1,0 +1,7 @@
+# Observability: Logs, Metrics, and Traces
+
+Observability is commonly described through three pillars: logs, metrics, and traces, each answering different questions about a running system. Logs are discrete, timestamped, often unstructured or semi-structured records of individual events, useful for understanding exactly what happened in a specific instance, such as a single failed request, but expensive to query at scale and not well-suited to answering aggregate questions.
+
+Metrics are numeric measurements aggregated over time, such as request rate, error rate, or latency percentiles, that are cheap to store and query even at high volume, and are well-suited to dashboards and alerting on system-wide trends. However, metrics alone can't tell you why a specific request was slow, only that requests in general are slower than usual.
+
+Distributed tracing follows a single request as it propagates through multiple services, recording the time spent in each service and each downstream call as a "span," and assembling these spans into a trace that shows the full path and timing breakdown of that individual request. This is essential in a microservices architecture, where a single user-facing request might touch a dozen internal services, and pinpointing which one introduced latency would be nearly impossible from logs or metrics alone. Tools like OpenTelemetry have emerged to standardize instrumentation across all three pillars so they can be correlated together rather than treated as separate, disconnected data sources.

@@ -1,0 +1,7 @@
+# CI/CD Pipeline Design
+
+Continuous Integration (CI) is the practice of frequently merging code changes into a shared branch, with each merge automatically triggering a build and test suite to catch integration problems early, rather than discovering them during an infrequent, high-risk merge. Continuous Delivery extends this by automatically preparing every passing build for release, while Continuous Deployment goes a step further and automatically deploys every passing build to production without manual approval.
+
+A typical pipeline stages work to fail fast and cheap: linting and unit tests run first since they're fastest, followed by integration tests, then a build step producing a deployable artifact, then deployment to a staging environment, and finally either an automated or manual gate before production deployment. Caching dependencies between pipeline runs and running independent test suites in parallel are common optimizations to keep pipeline duration manageable as a codebase grows.
+
+Deployment strategies for the final production step include rolling deployments, which gradually replace old instances with new ones; blue-green deployments, which run two full production environments and switch traffic between them atomically; and canary deployments, which route a small percentage of production traffic to the new version before a full rollout, allowing real-world validation with limited blast radius if something is wrong.
